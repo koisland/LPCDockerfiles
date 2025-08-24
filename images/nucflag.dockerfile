@@ -11,6 +11,6 @@ RUN apt update && \
         -y
 
 RUN pip install nucflag && \
-    pip install pysam --force-reinstall --no-binary :all:
+    pip install pysam==0.23.2 --force-reinstall --no-binary :all:
 
-ENTRYPOINT [ nucflag ]
+ENTRYPOINT [ "nucflag" ]

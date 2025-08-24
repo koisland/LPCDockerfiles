@@ -11,7 +11,6 @@ RUN apt update && \
         libcairo2-dev \
         -y
 
-RUN pip install ModDotPlot && \
-    pip install pysam --force-reinstall --no-binary :all:
+RUN pip install ModDotPlot --no-binary pysam
 
-ENTRYPOINT [ moddotplot ]
+ENTRYPOINT [ "moddotplot" ]
